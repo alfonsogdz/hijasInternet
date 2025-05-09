@@ -1,0 +1,384 @@
+/* Global styles */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  color: #333333;
+  background-color: #f4f4f4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  color: #6c63ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3220a8;
+  text-decoration: underline;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top:0;
+  
+}
+#hero{
+  margin-top: 100px;
+
+}
+
+
+.navbar-brand {
+  font-weight: bold;
+  color: #6c63ff;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #333333;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+  color: #6c63ff;
+}
+
+/* Homepage styles */
+#top {
+  height: 100vh;
+  background-image: url("../img/homepage-bg.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#top:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+#top .container {
+  position: relative;
+  z-index: 1;
+}
+
+#top h1 {
+  color: #6c63ff;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#top h2 {
+  color: #333333;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.btn-get-started {
+  background-color: #6c63ff;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+  margin-right: 1rem;
+}
+
+.btn-get-started:hover {
+  background-color: #443cb5;
+}
+
+.btn-services {
+  background-color: #ffffff;
+  color: #333333;
+  font-weight: bold;
+  border-radius: 4px;
+  border: 2px solid #6c63ff;
+  padding: 0.5rem 1.5rem;
+}
+
+.btn-services:hover {
+  background-color: #6c63ff;
+  color: #ffffff;
+}
+
+/* About section styles */
+#about {
+  padding: 5rem 0;
+  background-color: #ffffff;
+}
+
+#about h2 {
+  color: #333333;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+#about p {
+  color: #555555;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+#about img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Services section styles */
+#services {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+}
+.carousel-item img {
+  object-fit: contain; 
+  object-position: center; 
+  height: 400px; 
+  width: 100%;
+}
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+  outline: none !important;   
+  box-shadow: none !important; 
+  border: none !important; 
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+  background: none !important;  
+  border: none !important;  
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0) !important; 
+  filter: none !important;  
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 100%, 100%;
+}
+
+
+.carousel-caption h5 {
+  filter: invert(1);  
+}
+
+
+.carousel-caption p {
+  filter: invert(1);  
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); 
+}
+
+/* Logo size */
+.logo {
+  width: 400px;
+  height: 500px;
+}
+
+/* Member Section */
+#team {
+  background: #fff;
+  padding: 80px 0;
+}
+
+#team .card {
+  border: none;
+  background: #fff;
+}
+.card {
+  height: 100%;
+}
+
+.member-pic {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+
+.member-pic img {
+  max-width: 100%;
+  height: auto;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.member-pic:hover img {
+  transform: scale(1.1);
+}
+
+.member-info {
+  text-align: center;
+}
+
+.member-info h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.member-info span {
+  display: block;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.member-info p {
+  padding: 10px;
+}
+
+.member-social {
+  margin-top: 15px;
+}
+
+.member-social a {
+  font-size: 18px;
+  color: #9a9a9a;
+  margin: 0 10px;
+}
+
+.member-social a:hover {
+  color: #007bff;
+}
+
+.social a {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.btn {
+  background-color: #6c61f6;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+#contact {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+}
+
+.contact-text {
+  text-align: left;
+  margin-right: 30px;
+}
+
+.contact-text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.contact-text p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+
+.social-icons a {
+  display: inline-block;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+  margin-right: 15px;
+  color: #6c61f6;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: #333333;
+}
+
+.fa-x-twitter::before {
+  content: "𝕏"; /* Unicode character for the new Twitter "X" */
+  font-family: sans-serif;
+  font-size: 1.2em;
+}
+
+/* General image hover effect */
+.img-hover-effect {
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.img-hover-effect:hover {
+  transform: scale(1.1);
+}
+
+.img-hover-effect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.img-hover-effect:hover::before {
+  opacity: 1;
+}
+
+/* Change the background color of the arrow buttons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #6c61f6; /* Add your desired background color here */
+  width: 30px;
+  height: 30px;
+}
+
+/* Change the arrows color */
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+  color: #ffffff; /* Change this to your desired arrow color */
+}
+
+.carousel-item img {
+  max-width: 100%; /* Adjust the maximum width percentage value as needed */
+  max-height: 400px; /* Adjust the maximum height value as needed */
+  width: auto; /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures the aspect ratio is maintained while covering the container */
+}

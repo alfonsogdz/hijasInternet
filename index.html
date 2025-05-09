@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hijas de Internet</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/c28947cc06.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="shortcut icon" href="img/logo_ico.ico" type="image/x-icon" />
+
+  <!-- Script for smooth scrolling -->
+  <script>
+    function scrollToSection(sectionId) {
+      document
+        .getElementById(sectionId)
+        .scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+      <a class="navbar-brand" href="#"><img src="img/1_logoextendido.png" alt="My Logo" width="200" /></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="scrollToSection('about')">Sobre nosotras</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="scrollToSection('services')">¿Qué hacemos?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="scrollToSection('team')">Equipo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="scrollToSection('contact')">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 d-flex flex-column align-items-center">
+          <img src="img/logo.png" alt="Hijas de Internet Hero Image" class="img-fluid img-hover-effect" />
+          <div class="col-md-10 text-center">
+            <p class="lead">
+              Buscamos una Internet más segura, diversa e inclusiva para todas
+              las personas
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2>Sobre nosotras</h2>
+          <p>
+            Somos una plataforma de mujeres que busca crear una Internet más
+            segura, diversa e inclusiva para todas las personas. Hacemos
+            investigaciones, talleres y creamos contenido sobre las
+            implicaciones de nacer y crecer en la era de la revolución
+            digital.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <img src="img/4_about.png" alt="About Us Image" class="img-fluid img-hover-effect" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container">
+      <div class="row justify-content-center">
+        <h3 style="font-weight: bold">¿Qué hacemos?</h3>
+
+        <div class="col-12 mt-2">
+          <div id="tarjetaCarrusel" class="carousel slide" data-ride="carousel" data-interval="5000">
+          
+            <!-- Slides -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card">
+                      <img src="img/1_charla_colored.png" data-src="img/1_charla.png"
+                        class="card-img-top img-hover-effect" alt="Talleres y charlas" />
+                      <div class="card-body">
+                        <div class="text-center">
+                          <h4 class="card-title">Talleres y charlas</h4>
+                          <hr>
+                        </div>
+                        <p class="card-text text-justify">
+                          Damos charlas y talleres sobre temas de seguridad en
+                          digital, diversidad e inclusión, y alfabetización digital.
+                        </p>
+                        <div class="text-center">
+                          <a href="talleres.html" class="btn">Conoce más</a>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card">
+                      <img src="img/3_internet_colored.png" data-src="img/3_internet.png"
+                        class="card-img-top img-hover-effect" alt="Investigacion" />
+                      <div class="card-body">
+                        <div class="text-center">
+                          <h4 class="card-title">Investigación</h4>
+                          <hr>
+                        </div>
+                      
+                        <p class="card-text text-justify">
+                          Hacemos investigación en temas de seguridad, accesibilidad,
+                          bienestar digital y derechos digitales.
+                        </p>
+                        <div class="text-center">
+                          <a href="#" class="btn">Conoce más</a>
+                        </div>
+                      
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card">
+                      <img src="img/2_content_colored.png" data-src="img/2_content.png"
+                        class="card-img-top img-hover-effect" alt="Creación de contenido" />
+                      <div class="card-body">
+                        <div class="text-center">
+                          <h4 class="card-title">Creación de contenido</h4>
+                          <hr>
+                        </div>
+                        
+                        <p class="card-text text-justify">
+                          Creamos contenido sobre tecnología y las implicaciones de
+                          nacer y crecer en la revolución digital.
+                        </p>
+                        <div class="text-center">
+                          <a href="#" class="btn">Conoce más</a>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card">
+                      <img src="img/2_content_colored.png" data-src="img/2_content.png"
+                        class="card-img-top img-hover-effect" alt="Creación de contenido" />
+                      <div class="card-body">
+                        <div class="text-center">
+                          <h4 class="card-title">Creación de contenido</h4>
+                          <hr>
+                        </div>
+                       
+                        <p class="card-text text-justify">
+                          Creamos contenido sobre tecnología y las implicaciones de
+                          nacer y crecer en la revolución digital.
+                        </p>
+                        <div class="text-center">
+                          <a href="#" class="btn">Conoce más</a>
+                        </div>
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Controles -->
+            <a class="carousel-control-prev" href="#tarjetaCarrusel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#tarjetaCarrusel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Siguiente</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="section-header">
+          <h3 style="font-weight: bold">¡Conoce al equipo!</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- First Column -->
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card">
+                <!-- Member 1 -->
+                <div class="member-pic">
+                  <img src="img/Mon.png" alt="Monserrat López" />
+                </div>
+                <div class="member-info">
+                  <h4>Monserrat López</h4>
+                  <span>Cofundadora</span>
+                  <p>
+                    Es economista y estudia la Maestría de Ciencia de Datos
+                    para Políticas Públicas. Es apasionada del uso crítico de
+                    los datos y la tecnología para el bien social.
+                  </p>
+                  <div class="social">
+                    <a href="https://x.com/MonLopez_"><i class="fa fa-x-twitter"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card">
+                <!-- Member 2 -->
+                <div class="member-pic">
+                  <img src="img/Lui.png" alt="Miembro del equipo 2" />
+                </div>
+                <div class="member-info">
+                  <h4>Luisa Alfaro</h4>
+                  <span>Cofundadora</span>
+                  <p>
+                    Luisa es politóloga y coordinadora de Estrategias de
+                    Incidencia. Su principal agenda de investigación es la
+                    inclusión en el desarrollo de tecnología de niñas, niños,
+                    niñes y adolescentes.
+                  </p>
+                  <div class="social">
+                    <a href="https://www.linkedin.com/in/luisa-alfaro15/"><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Column -->
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card">
+                <!-- Member 3 -->
+                <div class="member-pic">
+                  <img src="img/aranxa.png" alt="Miembro del equipo 3" />
+                </div>
+                <div class="member-info">
+                  <h4>Aranxa Bello</h4>
+                  <span>Investigadora</span>
+                  <p>
+                    Aranxa es abogada y defensora de los derechos de las
+                    personas con discapacidad. Hace investigación y activismo
+                    para crear espacios digitales más accesibles e inclusivos.
+                  </p>
+                  <div class="social">
+                    <a href="https://twitter.com/aranxaconequis"><i class="fa fa-x-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/aranxa-bello-brindis-a72802137/"><i
+                        class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card">
+                <!-- Member 4 -->
+                <div class="member-pic">
+                  <img src="img/palomi.png" alt="Paloma Vázquez" />
+                </div>
+                <div class="member-info">
+                  <h4>Paloma Vázquez</h4>
+                  <span>Community Manager</span>
+                  <p>
+                    Paloma es antropólga social y UX en formación. Crea y
+                    comparte contenido para a construir comunidad en Hijas de
+                    Internet.
+                  </p>
+                  <div class="social">
+                    <a href="https://twitter.com/palomaescribe"><i class="fa fa-x-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/paloma-v%C3%A1zquez-539763240/"><i
+                        class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="contact-text">
+            <h2><a href="contacto.html">Contáctanos</a></h2>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="social-icons text-right">
+            <a href="https://www.linkedin.com/company/hijas-de-internet/"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+            <a href="#"><i class="fab fa-tiktok fa-2x"></i></a>
+            <a href="https://www.instagram.com/hijasdeinternet/"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://x.com/hijasdeinternet"><i class="fa fa-x-twitter fa-2x"></i></a>
+            <a href=""><i class="fab fa-bluesky fa-2x"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript -->
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+
+</html>
