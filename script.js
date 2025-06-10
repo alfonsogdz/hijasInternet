@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // Activate scrollspy to add active class to navbar items on scroll
   $('body').scrollspy({
     target: '#navbar',
@@ -6,7 +6,7 @@ $(document).ready(function() {
   });
 
   // Function to collapse Navbar
-  var navbarCollapse = function() {
+  var navbarCollapse = function () {
     if ($("#navbar").offset().top > 100) {
       $("#navbar").addClass("navbar-shrink");
     } else {
@@ -22,14 +22,14 @@ $(document).ready(function() {
 
   // Hover effect for images
   $(".img-hover-effect").hover(
-    function() {
+    function () {
       var imgElem = $(this); // Use variable to store the image element
       var hoverImage = imgElem.attr("data-src");
       imgElem.attr("data-src", imgElem.attr("src"));
       imgElem.attr("src", hoverImage);
       imgElem.css("background-image", "url(" + imgElem.attr("src") + ")");
     },
-    function() {
+    function () {
       var imgElem = $(this); // Use variable to store the image element
       var originalImage = imgElem.attr("data-src");
       imgElem.attr("data-src", imgElem.attr("src"));

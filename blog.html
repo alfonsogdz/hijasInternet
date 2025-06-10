@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +10,18 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
   <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/c28947cc06.js" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="img/logo_ico.ico" type="image/x-icon" />
+
 </head>
+
 <body>
   <!-- Header Section -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Hijas de Internet</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="#"><img src="img/1_logoextendido.png" alt="My Logo" width="200" /></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -35,55 +40,67 @@
           <li class="nav-item">
             <a class="nav-link" href="index.html#contact">Contacto</a>
           </li>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Blog</a>
-        </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
         </ul>
       </div>
     </nav>
   </header>
 
-     <!-- Hero Section -->
-     <section id="hero">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-6 d-flex flex-column align-items-center">
-              <img src="img/logo.png" alt="Hijas de Internet Hero Image" class="img-fluid">
-              <div class="col-md-10 text-center">
-              </div>            
-            </div>
-          </div>
-        </div>
-      </section>
-      
- 
-  <!-- Blog Section -->
-  <section id="blog">
+  <!-- Hero Section -->
+  <section id="hero">
     <div class="container">
-      <h2 class="text-center" style="margin-top: 30px;">Bienvenidos al Blog de Hijas de Internet</h2>
-      <p class="lead text-center" style="margin-top: 30px;">Aquí encontrarás artículos, noticias y reflexiones sobre los temas que nos apasionan y nos preocupan en torno a la tecnología y la era digital.</p>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <img src="img/blog1.jpg" class="card-img-top" alt="Image description">
-            <div class="card-body">
-              <h4 class="card-title">La ciberseguridad en la era de la información</h4>
-              <p class="card-text">El auge de la tecnología y la información digital ha traído consigo nuevos riesgos en la seguridad y privacidad de datos.</p>
-              <a href="#" class="btn">Leer más</a>
-            </div>
+      <div class="row justify-content-center">
+        <div class="col-md-6 d-flex flex-column align-items-center">
+          <img src="img/logo.png" alt="Hijas de Internet Hero Image" class="img-fluid">
+          <div class="col-md-10 text-center">
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="img/blog2.jpg" class="card-img-top" alt="Image description">
-            <div class="card-body">
-              <h4 class="card-title">¿Cómo ser un aliado digital?</h4>
-              <p class="card-text">El auge de la tecnología y la información digital ha traído consigo nuevos riesgos en la seguridad y privacidad de datos.</p>
-              <a href="#" class="btn">Leer más</a>
-            </div>
-          </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Blog Section -->
+  <div id="blog">
+    <section class="container my-5">
+      <div style="display: flex; justify-content: center; margin-bottom: 1.5rem;">
+        <h1 class="mb-4 text-center" style="transform: rotate(-15deg);
+    display: inline-block;
+    margin: 0;
+    background-color: #6c63ff;
+    color: white;               
+    padding: 0.5rem 1rem;       
+    border-radius: 0.3rem;">Blog</h1>
+      </div>
+
+      <!-- Artículo del blog -->
+      <div class="card mb-4 shadow rounded border border-success border-2">
+        <div class="card-body">
+          <h2 class="card-title blog-title">Título del Primer Post</h2>
+          <p class="text-muted">Publicado el 4 de junio de 2025 por <strong>Luisa Alfaro</strong></p>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat delectus error dolore, quo culpa quisquam,
+            odit vel eligendi facere architecto enim, quidem dolor est non iste officiis inventore veritatis. Fugit.
+          </p>
         </div>
+      </div>
+
+      <!-- Segundo artículo -->
+      <div class="card mb-4 shadow rounded border-success border-2">
+        <div class="card-body">
+          <h2 class="card-title">Otro Artículo Interesante</h2>
+          <p class="text-muted">Publicado el 3 de junio de 2025 por <strong>Ana Gómez</strong></p>
+          <p class="card-text">
+            En este post hablo sobre cómo empezar un blog personal utilizando HTML y Bootstrap. ¡Es más fácil de lo que
+            parece!
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <!-- Contact -->
   <section id="contact">
@@ -91,29 +108,29 @@
       <div class="row">
         <div class="col-md-6">
           <div class="contact-text">
-            <h2>Contáctanos</h2>
-            <p>Si quieres ponerte en contacto con nosotras, escríbenos a: hijasdeinternet@gmail.com</p>
+            <a href="contacto.html" class="btn btn-primary btn-sm">Contáctanos</a>
           </div>
         </div>
         <div class="col-md-6">
-            <div class="contact-icons">
-              <h3>Síguenos en redes sociales:</h3>
-              <div class="social-icons text-right">
-                <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
-                <a href="#"><i class="fab fa-tiktok fa-2x"></i></a>
-                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-              </div>
-            </div>
+          <div class="social-icons text-right">
+            <a href="https://www.linkedin.com/company/hijas-de-internet/"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+            <a href="#"><i class="fab fa-tiktok fa-2x"></i></a>
+            <a href="https://www.instagram.com/hijasdeinternet/"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://x.com/hijasdeinternet"><i class="fab fa-square-x-twitter fa-2x"></i></a>
+            <a href="https://tu-destino.com">
+              <i class="fab fa-bluesky fa-2x"></i>
+            </a>
           </div>
         </div>
       </div>
-    </section>
-  
-<!-- JavaScript -->
-<script src="script.js"></script>
-<script src="js/jquery-3.5.1.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
+    </div>
+  </section>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="styles.css" />
 
     <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/c28947cc06.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+
     <link rel="shortcut icon" href="img/logo_ico.ico" type="image/x-icon" />
 </head>
 
@@ -69,35 +69,35 @@
     <!-- Talleres y Charlas -->
     <section id="about">
         <div class="container my-5">
-          <div class="card shadow">
-            <div class="card-body">
-              <h2 class="mb-4 text-center">Contáctanos</h2>
-              <form action="https://formsubmit.co/alfonsogdz760@gmail.com" method="POST">
-                <div class="mb-3">
-                  <label for="nombre" class="form-label">Nombre</label>
-                  <input type="text" class="form-control" id="nombre" name="nombre" required />
+            <div class="card shadow">
+                <div class="card-body">
+                    <h2 class="mb-4 text-center">Contáctanos</h2>
+                    <form id="form-contacto">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" name="email" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="asunto" class="form-label">Asunto</label>
+                            <input type="text" class="form-control" id="asunto" name="asunto" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label">Correo electrónico</label>
-                  <input type="email" class="form-control" id="email" name="email" required />
-                </div>
-                <div class="mb-3">
-                  <label for="asunto" class="form-label">Asunto</label>
-                  <input type="text" class="form-control" id="asunto" name="asunto" required />
-                </div>
-                <div class="mb-3">
-                  <label for="mensaje" class="form-label">Mensaje</label>
-                  <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
-                </div>
-                <div class="text-center">
-                  <button type="submit" class="btn btn-primary">Enviar</button>
-                </div>
-              </form>
             </div>
-          </div>
         </div>
-      </section>
-      
+    </section>
+
 
     <!-- Talleres Carousel -->
 
@@ -107,7 +107,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="contact-text">
-                        <h2><a href="contacto.html">Contáctanos</a></h2>
+                        <a href="contacto.html" class="btn btn-primary btn-sm">Contáctanos</a>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -117,18 +117,70 @@
                         <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
                         <a href="#"><i class="fab fa-tiktok fa-2x"></i></a>
                         <a href="https://www.instagram.com/hijasdeinternet/"><i class="fab fa-instagram fa-2x"></i></a>
-                        <a href="https://x.com/hijasdeinternet"><i class="fa fa-x-twitter fa-2x"></i></a>
+                        <a href="https://x.com/hijasdeinternet"><i class="fab fa-square-x-twitter fa-2x"></i></a>
+                        <a href="https://tu-destino.com">
+                            <i class="fab fa-bluesky fa-2x"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Spinner de carga -->
+    <div id="spinner-overlay" style="display: none;">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Enviando...</span>
+        </div>
+        <div class="text-white mt-2">Enviando...</div>
+    </div>
+
     <!-- JavaScript -->
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <!-- SWEETALERT2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('pPzVgJWcewnoR-A7W');
+        })();
+
+        document.getElementById('form-contacto').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const spinner = document.getElementById('spinner-overlay');
+            spinner.style.display = 'flex'; // Mostrar overlay
+
+            emailjs.sendForm('service_crm6hxc', 'template_eca7mm7', this)
+                .then(function () {
+                    spinner.style.display = 'none';
+
+                    Swal.fire({
+                        icon: 'success',
+                        title: '¡Mensaje enviado!',
+                        text: 'Gracias por contactarnos',
+                        confirmButtonText: 'Cerrar'
+                    });
+
+
+                }, function (error) {
+                    console.log('Error:', error);
+                    spinner.style.display = 'none';
+
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Error al enviar el mensaje. Intenta más tarde.',
+                        confirmButtonText: 'Cerrar'
+                    });
+                });
+        });
+    </script>
+
     <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
