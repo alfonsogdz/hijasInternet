@@ -22,7 +22,8 @@
     <!-- Header Section -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#"><img src="img/1_logoextendido.png" alt="My Logo" width="200" /></a>
+            <a class="navbar-brand" href="index.html"><img src="img/1_logoextendido.png" alt="My Logo"
+                    width="200" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -39,7 +40,7 @@
                         <a class="nav-link" href="index.html#team">Equipo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#contact">Contacto</a>
+                        <a class="nav-link" href="contacto.html#about">Contacto</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="blog.html">Blog</a>
@@ -71,7 +72,7 @@
         <div class="container my-5">
             <div class="card shadow">
                 <div class="card-body">
-                    <h2 class="mb-4 text-center">Contáctanos</h2>
+                    <h2 class="mb-4 text-center contact-title">Contáctanos</h2>
                     <form id="form-contacto">
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre</label>
@@ -102,30 +103,45 @@
     <!-- Talleres Carousel -->
 
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" class="py-4">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="contact-text">
-                        <a href="contacto.html" class="btn btn-primary btn-sm">Contáctanos</a>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="social-icons text-right">
-                        <a href="https://www.linkedin.com/company/hijas-de-internet/"><i
-                                class="fab fa-linkedin fa-2x"></i></a>
-                        <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
-                        <a href="#"><i class="fab fa-tiktok fa-2x"></i></a>
-                        <a href="https://www.instagram.com/hijasdeinternet/"><i class="fab fa-instagram fa-2x"></i></a>
-                        <a href="https://x.com/hijasdeinternet"><i class="fab fa-square-x-twitter fa-2x"></i></a>
-                        <a href="https://tu-destino.com">
-                            <i class="fab fa-bluesky fa-2x"></i>
-                        </a>
-                    </div>
+
+            <!-- Botón + Redes sociales -->
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+                <a href="contacto.html#about" class="btn btn-primary btn-sm">Contáctanos</a>
+
+                <div class="d-flex align-items-center flex-wrap">
+                    <a href="https://www.linkedin.com/company/hijas-de-internet/" class="ml-3 social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="ml-3 social-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="ml-3 social-link">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.instagram.com/hijasdeinternet/" class="ml-3 social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://x.com/hijasdeinternet" class="ml-3 social-link">
+                        <i class="fab fa-square-x-twitter"></i>
+                    </a>
+                    <a href="https://tu-destino.com" class="ml-3 social-link">
+                        <i class="fab fa-bluesky"></i>
+                    </a>
                 </div>
             </div>
+
+            <!-- Footer legal text -->
+            <div class="text-center">
+                <small class="text-muted">
+                    &copy; 2025 Hijas de Internet. Todos los derechos reservados.
+                </small>
+            </div>
+
         </div>
     </section>
+
 
     <!-- Spinner de carga -->
     <div id="spinner-overlay" style="display: none;">

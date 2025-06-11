@@ -33,14 +33,11 @@ a:hover {
   position: fixed;
   width: 100%;
   z-index: 1000;
-  top:0;
-  
+  top: 0;
 }
-#hero{
+#hero {
   margin-top: 100px;
-
 }
-
 
 .navbar-brand {
   font-weight: bold;
@@ -153,57 +150,59 @@ a:hover {
   background-color: #f5f5f5;
   padding: 50px 0;
 }
-#blog{
+#blog {
   background-color: #fff;
   padding: 50px 0;
 }
-.carousel-item img {
-  object-fit: contain; 
-  object-position: center; 
-  height: 400px; 
-  width: 100%;
-}
-.carousel-control-prev:focus,
-.carousel-control-next:focus {
-  outline: none !important;   
-  box-shadow: none !important; 
-  border: none !important; 
+/* Evitar que el carrusel cambie de altura entre slides */
+#workshopsCarousel {
+  position: relative;
 }
 
+.carousel-inner {
+  min-height: 650px; /* Altura fija para evitar salto */
+}
 
+/* Tarjetas con altura consistente */
+.card-carrusel {
+  height: 100%;
+}
+
+.card-img-top-carrusel {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body-carrusel {
+  display: flex;
+  flex-direction: column;
+  height: 460px;
+}
+
+.card-body-carrusel .btn {
+  margin-top: auto;
+}
+
+/* Controles siempre centrados verticalmente */
 .carousel-control-prev,
 .carousel-control-next {
-  background: none !important;  
-  border: none !important;  
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: auto;
+  width: 5%;
+  z-index: 10;
+  opacity: 1;
 }
 
-
+/* Íconos de control más visibles */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0) !important; 
-  filter: none !important;  
-}
-
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-size: 100%, 100%;
-}
-
-
-.carousel-caption h5 {
-  filter: invert(1);  
-}
-
-
-.carousel-caption p {
-  filter: invert(1);  
-}
-
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1); 
+  background-color: rgba(200, 200, 200, 0.7) !important;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-size: 100% 100%;
 }
 
 /* Logo size */
@@ -400,4 +399,20 @@ a:hover {
   align-items: center;
   z-index: 9999;
 }
+.social-link i {
+  font-size: 1.5rem; /* Tamaño similar al texto del botón */
+  width: 34px; /* Mismo ancho que la altura del botón */
+  height: 34px; /* Coincide con btn-sm approx. */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Opcional: suaviza la forma */
+}
 
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+.contact-title{
+  color: #6c63ff !important;
+}
