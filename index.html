@@ -19,10 +19,9 @@
 
   <!-- Script for smooth scrolling -->
   <script>
-    function scrollToSection(sectionId) {
-      document
-        .getElementById(sectionId)
-        .scrollIntoView({ behavior: "smooth" });
+    function scrollToSection(sectionId, event) {
+      if (event) event.preventDefault();
+      document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
     }
   </script>
 </head>
@@ -39,20 +38,20 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#" onclick="scrollToSection('about')">Sobre nosotras</a>
+            <a class="nav-link" href="#" onclick="scrollToSection('about', event)">Sobre nosotras</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" onclick="scrollToSection('services')">¿Qué hacemos?</a>
+            <a class="nav-link" href="#" onclick="scrollToSection('services', event)">¿Qué hacemos?</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" onclick="scrollToSection('team')">Equipo</a>
+            <a class="nav-link" href="#" onclick="scrollToSection('team', event)">Equipo</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contacto.html#about">Contacto</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="blog.html">Blog</a>
-          </li>
+          </li>-->
         </ul>
       </div>
     </nav>
@@ -110,7 +109,7 @@
               <div class="card-body">
                 <h4 class="card-title text-center">Talleres y charlas</h4>
                 <hr>
-                <p class="card-text text-justify">Damos charlas y talleres sobre temas de seguridad en digital,
+                <p class="card-text text-justify">Impartimos charlas y talleres sobre seguridad en digital,
                   diversidad e
                   inclusión, y alfabetización digital.</p>
                 <a href="talleres.html" class="btn d-block mx-auto"><i class="fa-solid fa-magnifying-glass"></i> Conoce
@@ -126,7 +125,7 @@
               <div class="card-body">
                 <h4 class="card-title text-center">Investigación</h4>
                 <hr>
-                <p class="card-text text-justify">Hacemos investigación en temas de seguridad, accesibilidad, bienestar
+                <p class="card-text text-justify">Hacemos investigación sobre seguridad, accesibilidad, bienestar
                   digital y
                   derechos digitales.</p>
                 <a href="investigacion.html" class="btn d-block mx-auto"><i class="fa-solid fa-magnifying-glass"></i>
@@ -169,7 +168,7 @@
 
           <!-- Slide 1 -->
           <div class="carousel-item active">
-            <div class="row">
+            <div class="row px-4">
               <!-- Member 1 -->
               <div class="col-lg-3 col-md-6 mb-4">
                 <div class="card">
@@ -179,11 +178,11 @@
                   <div class="member-info">
                     <h4>Monserrat López</h4>
                     <span>Cofundadora</span>
-                    <p>Es economista y estudia la Maestría de Ciencia de Datos para Políticas Públicas. Es apasionada
+                    <p>Monserrat es economista y científica de datos, especializada en políticas públcias. Es apasionada
                       del uso crítico de los datos y la tecnología para el bien social.</p>
                     <div class="social">
-                      <a href="https://x.com/MonLopez_"><i class="fab fa-square-x-twitter"></i></a>
-                      <a href=""><i class="fab fa-linkedin"></i></a>
+                      <a href="https://x.com/MonLopez_" target="_blank" rel="noopener"><i class="fab fa-square-x-twitter"></i></a>
+                      <a href="https://www.linkedin.com/in/monserratlopezperez"><i class="fab fa-linkedin"></i></a>
                     </div>
                   </div>
                 </div>
@@ -198,11 +197,9 @@
                   <div class="member-info">
                     <h4>Luisa Alfaro</h4>
                     <span>Cofundadora</span>
-                    <p>Luisa es politóloga y coordinadora de Estrategias de Incidencia. Su principal agenda de
-                      investigación es la inclusión en el desarrollo de tecnología de niñas, niños, niñes y
-                      adolescentes.</p>
+                    <p>Luisa es politóloga y promotora de derechos digitales por convicción. Desde hace más de cinco años trabaja entre el activismo, la investigación y la incidencia política enfocándose en juventudes, infancias, adolescencias, justicia social, tecnología y derechos humanos.</p>
                     <div class="social">
-                      <a href="https://www.linkedin.com/in/luisa-alfaro15/"><i class="fab fa-linkedin"></i></a>
+                      <a href="https://www.linkedin.com/in/luisa-alfaro15/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
                     </div>
                   </div>
                 </div>
@@ -212,18 +209,16 @@
               <div class="col-lg-3 col-md-6 mb-4">
                 <div class="card">
                   <div class="member-pic">
-                    <img src="img/aranxa.png" alt="Aranxa Bello" class="img-fluid">
+                    <img src="img/Ale.png" alt="Alejandra Luna" class="img-fluid">
                   </div>
                   <div class="member-info">
-                    <h4>Aranxa Bello</h4>
-                    <span>Investigadora</span>
-                    <p>Aranxa es abogada y defensora de los derechos de las personas con discapacidad. Hace
-                      investigación y activismo para crear espacios digitales más accesibles e inclusivos.</p>
-                    <div class="social">
-                      <a href="https://twitter.com/aranxaconequis"><i class="fab fa-square-x-twitter"></i></a>
+                    <h4>Alejandra Luna</h4>
+                    <span>Editora audiovisual</span>
+                    <p>Alejandra es Arquitecta y creadora interdisciplinaria. Se dedica a materializar, a través del lenguaje y la colaboración, realidades en dónde cada Ser sea capaz de encarnar su potencial más luminoso. En Hijas de Internet colabora creando atmósferas sonoras y visuales para amplificar el mensaje y la experiencia del espacio digital.</p>
+                    <!-- <div class="social">
                       <a href="https://www.linkedin.com/in/aranxa-bello-brindis-a72802137/"><i
                           class="fab fa-linkedin"></i></a>
-                    </div>
+                    </div>-->
                   </div>
                 </div>
               </div>
@@ -237,11 +232,10 @@
                   <div class="member-info">
                     <h4>Paloma Vázquez</h4>
                     <span>Community Manager</span>
-                    <p>Paloma es antropólga social y UX en formación. Crea y comparte contenido para a construir
-                      comunidad en Hijas de Internet.</p>
+                    <p>Paloma es antropóloga social. Colabora en programas de inclusión política de las juventudes, tanto en espacios físicos como digitales. Le gusta pensar en Internet como un espacio donde se expanden nuestras identidades.</p>
                     <div class="social">
-                      <a href="https://twitter.com/palomaescribe"><i class="fab fa-square-x-twitter"></i></a>
-                      <a href="https://www.linkedin.com/in/paloma-v%C3%A1zquez-539763240/"><i
+                      <a href="https://twitter.com/palomaescribe" target="_blank" rel="noopener"><i class="fab fa-square-x-twitter"></i></a>
+                      <a href="https://www.linkedin.com/in/paloma-v%C3%A1zquez-539763240/" target="_blank" rel="noopener"><i
                           class="fab fa-linkedin"></i></a>
                     </div>
                   </div>
@@ -249,22 +243,23 @@
               </div>
             </div>
           </div>
-          <!-- Slide 2 (nuevo miembro y otros, si tienes) -->
+          <!-- Slide 2 (nuevas miembras) -->
           <div class="carousel-item">
             <div class="row">
               <!-- Miembro 5 -->
               <div class="col-lg-3 col-md-6 mb-4">
                 <div class="card">
                   <div class="member-pic">
-                    <img src="" alt="Nuevo miembro" class="img-fluid">
+                    <img src="img/aranxa.png" alt="Aranxa Bello" class="img-fluid">
                   </div>
                   <div class="member-info">
-                    <h4>Nuevo Miembro</h4>
-                    <span>Ocupación</span>
-                    <p>Descripcion</p>
+                    <h4>Aranxa Bello</h4>
+                    <span>Investigadora</span>
+                    <p>Aranxa es abogada y defensora de los derechos de las personas con discapacidad. Hace
+                      investigación y activismo para crear espacios digitales más accesibles e inclusivos.</p>
                     <div class="social">
-                      <a href="https://twitter.com/"><i class="fab fa-square-x-twitter"></i></a>
-                      <a href="https://linkedin.com/in/"><i class="fab fa-linkedin"></i></a>
+                      <a href="https://twitter.com/aranxaconequis" target="_blank" rel="noopener"><i class="fab fa-square-x-twitter"></i></a>
+                      <a href="https://www.linkedin.com/in/aranxa-bello-brindis-a72802137/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
                     </div>
                   </div>
                 </div>
@@ -294,26 +289,29 @@
 
     <!-- Botón + Redes sociales -->
     <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
-      <a href="contacto.html#about" class="btn btn-primary btn-sm">Contáctanos</a>
+      <a href="contacto.html#about" class="btn btn-sm">Contáctanos</a>
 
       <div class="d-flex align-items-center flex-wrap">
-        <a href="https://www.linkedin.com/company/hijas-de-internet/" class="ml-3 social-link">
+        <a href="https://www.linkedin.com/company/hijas-de-internet/" target="_blank" rel="noopener" class="ml-3 social-link">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="#" class="ml-3 social-link">
+        <a href="https://www.youtube.com/@hijasdeinternet" target="_blank" rel="noopener" class="ml-3 social-link">
           <i class="fab fa-youtube"></i>
         </a>
-        <a href="#" class="ml-3 social-link">
+        <a href="https://www.tiktok.com/@hijasdeinternet?lang=en" target="_blank" rel="noopener" class="ml-3 social-link">
           <i class="fab fa-tiktok"></i>
         </a>
-        <a href="https://www.instagram.com/hijasdeinternet/" class="ml-3 social-link">
+        <a href="https://www.instagram.com/hijasdeinternet/" target="_blank" rel="noopener" class="ml-3 social-link">
           <i class="fab fa-instagram"></i>
         </a>
-        <a href="https://x.com/hijasdeinternet" class="ml-3 social-link">
+        <a href="https://x.com/hijasdeinternet" target="_blank" rel="noopener" class="ml-3 social-link">
           <i class="fab fa-square-x-twitter"></i>
         </a>
-        <a href="https://tu-destino.com" class="ml-3 social-link">
+        <a href="https://bsky.app/profile/hijasdeinternet.bsky.social" target="_blank" rel="noopener" class="ml-3 social-link">
           <i class="fab fa-bluesky"></i>
+        </a>
+        <a href="https://open.spotify.com/show/4HqBnWXPVusZbh1meZr0Fk" target="_blank" rel="noopener" class="ml-3 social-link">
+          <i class="fab fa-spotify"></i>
         </a>
       </div>
     </div>
@@ -327,10 +325,6 @@
 
   </div>
 </section>
-
-
-
-
 
 
 
