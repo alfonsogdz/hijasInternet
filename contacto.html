@@ -91,7 +91,7 @@
                             <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-sm">Enviar</button>
+                            <button type="submit" class="btn btn-sm">Enviar <i class="fa fa-paper-plane"></i></button>
                         </div>
                     </form>
                 </div>
@@ -105,34 +105,37 @@
     <!-- Contact -->
     <section id="contact" class="py-4">
         <div class="container">
+            <!-- Botón y Redes Sociales -->
+            <div class="contact-row mb-3">
+                <!-- Botón -->
+                <a href="contacto.html#about" class="btn btn-sm btn-primary">Contáctanos</a>
 
-            <!-- Botón + Redes sociales -->
-            <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
-                <a href="contacto.html#about" class="btn btn-sm">Contáctanos</a>
-
-                <div class="d-flex align-items-center flex-wrap">
-                    <a href="https://www.linkedin.com/company/hijas-de-internet/" class="ml-3 social-link">
+                <!-- Íconos Sociales -->
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/company/hijas-de-internet/" target="_blank" class="social-link">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="#" class="ml-3 social-link">
+                    <a href="https://www.youtube.com/@hijasdeinternet" target="_blank" class="social-link">
                         <i class="fab fa-youtube"></i>
                     </a>
-                    <a href="#" class="ml-3 social-link">
+                    <a href="https://www.tiktok.com/@hijasdeinternet?lang=en" target="_blank" class="social-link">
                         <i class="fab fa-tiktok"></i>
                     </a>
-                    <a href="https://www.instagram.com/hijasdeinternet/" class="ml-3 social-link">
+                    <a href="https://www.instagram.com/hijasdeinternet/" target="_blank" class="social-link">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://x.com/hijasdeinternet" class="ml-3 social-link">
+                    <a href="https://x.com/hijasdeinternet" target="_blank" class="social-link">
                         <i class="fab fa-square-x-twitter"></i>
                     </a>
-                    <a href="https://tu-destino.com" class="ml-3 social-link">
+                    <a href="https://bsky.app/profile/hijasdeinternet.bsky.social" target="_blank" class="social-link">
                         <i class="fab fa-bluesky"></i>
+                    </a>
+                    <a href="https://open.spotify.com/show/4HqBnWXPVusZbh1meZr0Fk" target="_blank" class="social-link">
+                        <i class="fab fa-spotify"></i>
                     </a>
                 </div>
             </div>
-
-            <!-- Footer legal text -->
+            <!-- Texto legal -->
             <div class="text-center">
                 <small class="text-muted">
                     &copy; 2025 Hijas de Internet. Todos los derechos reservados.
@@ -181,6 +184,7 @@
                         text: 'Gracias por contactarnos',
                         confirmButtonText: 'Cerrar'
                     });
+                    document.getElementById('form-contacto').reset();
 
 
                 }, function (error) {
